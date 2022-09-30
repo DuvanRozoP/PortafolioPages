@@ -1,0 +1,170 @@
+// ESTILOS PARA EL NAVAR
+.container-navar{
+  width: 100%;
+  height: 60px;
+  color: white;
+  background-color: rgb(5, 2, 18);
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.list{
+  list-style: none;
+  display: flex;
+}
+
+li{
+  text-align: center;
+  transition: 400ms;
+  transform-style: preserve-3d;
+  margin-right: 10px;
+}
+
+span{
+  width: 100px;
+  height: 35px;
+  border-radius: 6px;
+  //background-color: white;
+  //color: rgb(5, 2, 18);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li::after,
+li::before{
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background: rgb(34, 1, 180);
+  transition: all 300ms linear;
+}
+
+span::after,
+span::before{
+  content: "";
+  width: 2px;
+  height: 0px;
+  position: absolute;
+  background: rgb(34, 1, 180);
+  transition: all 300ms linear;
+}
+
+li:hover::after,
+li:hover::before{
+  width: 100%;
+}
+
+li:hover span::after,
+li:hover span::before{
+  height: 100%;
+}
+
+li::after{
+  right: 0;
+  bottom: 0;
+  transition-duration: 300ms;
+}
+
+li span::after{
+  right: 0;
+  bottom: 0;
+  transition-duration: 300ms;
+}
+
+li::before{
+  left: 0;
+  top: 0;
+  transition-duration: 300ms;
+}
+
+li span::before{
+  left: 0;
+  top: 0;
+  transition-duration: 300ms;
+}
+
+// IMAGEN PERFIL
+
+.navarPerfil{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+.containerNavarPerfil{
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  margin-right: auto;
+  transform-style: preserve-3d;
+  transition: all 400ms;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerNavarPerfil:hover{
+  transform: scale(110%);
+}
+
+.containerNavarPerfil:hover::after{
+  border-radius: 100px;
+  content:"";
+  background: linear-gradient(45deg,#d300fd,
+    #0004f5, #00eeff,#15ff00,#bbff00)
+    repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: 0px;
+  left: 0px;
+  filter: blur(3px);
+  transform: translateZ(-2px);
+  animation: backgroundRGB 2s alternate infinite;
+}
+
+.nombrePerfil{
+  position: absolute;
+  right: -125px;
+  width: 150px;
+
+  text-align: end;
+  padding-right: 15px;
+  border-radius: 5px;
+  transform: translateZ(-1px);
+
+  transform-style: preserve-3d;
+  transition: all 400ms;
+}
+
+.nombrePerfil:hover{
+  background-color: white;
+  color: rgb(5, 2, 18);
+  width: 150px;
+}
+
+.nombrePerfil:hover::after{
+  height: 36px;
+  content:"";
+  background: linear-gradient(45deg,#d300fd,
+    #0004f5, #00eeff,#15ff00,#bbff00)
+    repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  left: 0px;
+  filter: blur(3px);
+  transform: translateZ(-2px);
+  animation: backgroundRGB 2s alternate infinite;
+}
+
+@keyframes backgroundRGB {
+  from{background-position: 0% 100%;}
+  to{background-position: 100% 0%;}
+}
