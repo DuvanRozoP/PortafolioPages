@@ -1,0 +1,33 @@
+<section class="containerHability">
+
+  <section class="titleHability">
+    <h1 class="titleH">Habilidades Actuales como Frontend Developer</h1>
+  </section>
+
+  <section class="barraHability">
+
+    <!-- <section class="htmlBar">
+      <div class="containerBackground">
+        <div class="progress color1"></div>
+      </div>
+    </section> -->
+
+    <section *ngFor="let data of habilitys" >
+
+      <h1 class="nameHability"> {{ data.hability }} </h1>
+      <div class="containerBackground">
+        <div [class]="data.bar" [style]="data.points"></div>
+      </div>
+
+    </section>
+
+    <!-- <section class="cssBar"></section>
+    <section class="jsBar"></section>
+    <section class="typeScriptBar"></section> -->
+  </section>
+
+  <section class="descriptionInfo">
+
+  </section>
+
+</section>

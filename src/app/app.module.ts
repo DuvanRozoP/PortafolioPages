@@ -8,6 +8,7 @@ import { NavarComponent } from './componets/navar/navar.component';
 import { FrontPageComponent } from './componets/front-page/front-page.component';
 import { AnimationsRelaxDirective } from './directives/animations-relax.directive';
 import { AnimationsNavarDirective } from './directives/animations-navar.directive';
+import { HabilityComponent } from './componets/hability/hability.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AnimationsNavarDirective } from './directives/animations-navar.directiv
     NavarComponent,
     FrontPageComponent,
     AnimationsRelaxDirective,
-    AnimationsNavarDirective
+    AnimationsNavarDirective,
+    HabilityComponent
   ],
   imports: [
     BrowserModule,

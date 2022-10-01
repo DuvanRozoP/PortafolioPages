@@ -22,7 +22,7 @@ export class AnimationsNavarDirective {
       this.dispose();
       this.animationsInstance = anime({
         targets: this.element.nativeElement,
-        ... this.appAnimationsNavar
+        //... this.appAnimationsNavar
       })
     }
   }
